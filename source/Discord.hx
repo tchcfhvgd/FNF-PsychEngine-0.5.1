@@ -1,3 +1,4 @@
+#if desktop
 package;
 
 import Sys.sleep;
