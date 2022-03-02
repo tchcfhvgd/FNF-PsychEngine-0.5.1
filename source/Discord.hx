@@ -39,7 +39,7 @@ class DiscordClient
 	
 	public static function shutdown()
 	{
-				if desktop
+				#if desktop
 		DiscordRpc.shutdown();
 		        #end
 	}
