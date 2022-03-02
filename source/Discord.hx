@@ -34,6 +34,7 @@ class DiscordClient
 		}
 
 		DiscordRpc.shutdown();
+				#end	
 	}
 	
 	public static function shutdown()
@@ -73,6 +74,7 @@ class DiscordClient
 			new DiscordClient();
 		});
 		trace("Discord Client initialized");
+				#end	
 	}
 
 	public static function changePresence(details:String, state:Null<String>, ?smallImageKey : String, ?hasStartTimestamp : Bool, ?endTimestamp: Float)
@@ -95,6 +97,7 @@ class DiscordClient
 			startTimestamp : Std.int(startTimestamp / 1000),
             endTimestamp : Std.int(endTimestamp / 1000)
 		});
+				 #end
 
 		//trace('Discord RPC Updated. Arguments: $details, $state, $smallImageKey, $hasStartTimestamp, $endTimestamp');
 	}
@@ -104,6 +107,7 @@ class DiscordClient
 		Lua_helper.add_callback(lua, "changePresence", function(details:String, state:Null<String>, ?smallImageKey:String, ?hasStartTimestamp:Bool, ?endTimestamp:Float) {
 					  #if desktop			   
 			changePresence(details, state, smallImageKey, hasStartTimestamp, endTimestamp);
+					 #end		
 		});
 	}
 	#end
