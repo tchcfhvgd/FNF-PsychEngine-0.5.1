@@ -16,6 +16,7 @@ class DiscordClient
 {
 	public function new()
 	{
+				#if desktop		   
 		trace("Discord Client starting...");
 		DiscordRpc.start({
 			clientID: "863222024192262205",
@@ -101,6 +102,7 @@ class DiscordClient
 	#if LUA_ALLOWED
 	public static function addLuaCallbacks(lua:State) {
 		Lua_helper.add_callback(lua, "changePresence", function(details:String, state:Null<String>, ?smallImageKey:String, ?hasStartTimestamp:Bool, ?endTimestamp:Float) {
+					  #if desktop			   
 			changePresence(details, state, smallImageKey, hasStartTimestamp, endTimestamp);
 		});
 	}
