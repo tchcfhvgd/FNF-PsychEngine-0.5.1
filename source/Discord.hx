@@ -39,6 +39,7 @@ class DiscordClient
 	{
 				if desktop		   
 		DiscordRpc.shutdown();
+		        #end
 	}
 	
 	static function onReady()
@@ -50,6 +51,7 @@ class DiscordClient
 			largeImageKey: 'icon',
 			largeImageText: "Psych Engine"
 		});
+		         #end
 	}
 
 	static function onError(_code:Int, _message:String)
