@@ -9,6 +9,9 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+#if android
+import flixel.FlxCamera;
+#end
 
 class GameOverSubstate extends MusicBeatSubstate
 {
