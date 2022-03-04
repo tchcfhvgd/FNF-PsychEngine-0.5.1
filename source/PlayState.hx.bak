@@ -912,6 +912,14 @@ class PlayState extends MusicBeatState
 				{
 					luaArray.push(new FunkinLua(luaToLoad));
 				}
+				else
+			{
+				luaToLoad = Paths.getPreloadPath('custom_notetypes/' + notetype + '.lua');
+				if(FileSystem.exists(luaToLoad))
+				{
+					luaArray.push(new FunkinLua(luaToLoad));
+				}
+			}
 			
 		}
 		
