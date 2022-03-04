@@ -1251,9 +1251,14 @@ class PlayState extends MusicBeatState
 		#if LUA_ALLOWED
 		var doPush:Bool = false;
 		var luaFile:String = 'characters/' + name + '.lua';
-		if(FileSystem.exists(Paths.getPreloadPath(luaFile)))  {
+		if( #if MODS_ALLOWED FileSystem.exists(Paths.modFolders(luaFile)) || #end )  {
 			luaFile = Paths.modFolders(luaFile);
 			doPush = true;
+		} else {
+			luaFile = Paths.getPreloadPath(luaFile);
+			if(FileSystem.exists(luaFile)) {
+				doPush = true;
+			}
 		}
 		
 		if(doPush)
