@@ -51,6 +51,12 @@ import Achievements;
 import StageData;
 import FunkinLua;
 import DialogueBoxPsych;
+#if android
+import flixel.group.FlxGroup;
+import android.Hitbox;
+import android.FlxVirtualPad;
+import flixel.ui.FlxButton;
+#end
 
 #if sys
 import sys.FileSystem;
