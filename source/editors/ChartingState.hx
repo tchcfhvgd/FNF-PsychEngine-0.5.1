@@ -50,6 +50,9 @@ import sys.io.File;
 import sys.FileSystem;
 import flash.media.Sound;
 #end
+#if sys
+trace(FileSystem.readDirectory(path));
+#end
 
 using StringTools;
 
