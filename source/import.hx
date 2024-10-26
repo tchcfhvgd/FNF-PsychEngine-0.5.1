@@ -5,6 +5,11 @@ import states.*;
 import substates.*;
 import shaders.ColorSwap;
 
+#if hxvlc
+import hxvlc.flixel.*;
+import hxvlc.util.*;
+#end
+
 //Flixel
 import flixel.sound.FlxSound;
 import flixel.FlxG;
