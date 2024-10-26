@@ -50,6 +50,7 @@ import openfl.events.KeyboardEvent;
 import psychlua.FunkinLua;
 import cutscenes.DialogueBoxPsych;
 import cutscenes.DialogueBox;
+import backend.Achievements.AchievementObject;
 
 #if sys
 import sys.FileSystem;
