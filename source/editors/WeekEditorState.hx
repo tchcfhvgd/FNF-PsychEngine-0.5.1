@@ -24,14 +24,14 @@ import flixel.ui.FlxButton;
 import openfl.net.FileReference;
 import openfl.events.Event;
 import openfl.events.IOErrorEvent;
-import flash.net.FileFilter;
+import openfl.net.FileFilter;
 import lime.system.Clipboard;
 import haxe.Json;
 #if sys
 import sys.io.File;
 import sys.FileSystem;
 #end
-import WeekData;
+import backend.WeekData;
 
 using StringTools;
 
