@@ -4,7 +4,7 @@ package states;
 import Discord.DiscordClient;
 #end
 import editors.ChartingState;
-import flash.text.TextField;
+import openfl.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
@@ -17,7 +17,7 @@ import flixel.tweens.FlxTween;
 import lime.utils.Assets;
 import flixel.system.FlxSound;
 import openfl.utils.Assets as OpenFlAssets;
-import WeekData;
+import backend.WeekData;
 #if MODS_ALLOWED
 import sys.FileSystem;
 #end
