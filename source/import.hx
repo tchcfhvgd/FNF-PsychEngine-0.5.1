@@ -1,5 +1,6 @@
 #if !macro
 import backend.*;
+import objects.*;
 
 //Flixel
 import flixel.sound.FlxSound;
