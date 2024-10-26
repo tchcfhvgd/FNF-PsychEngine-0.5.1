@@ -73,10 +73,8 @@ class Main extends Sprite
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen));
 
 	        FlxG.signals.preStateSwitch.add(function () {
-			if (!Main.skipNextDump) {
 				Paths.clearStoredMemory(true);
 				FlxG.bitmap.dumpCache();
-			}
 		});
 		FlxG.signals.postStateSwitch.add(function () {
 			Paths.clearUnusedMemory();
