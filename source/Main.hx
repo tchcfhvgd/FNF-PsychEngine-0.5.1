@@ -72,7 +72,18 @@ class Main extends Sprite
 		ClientPrefs.loadDefaultKeys();
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen));
 
-	        fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
+	        FlxG.signals.preStateSwitch.add(function () {
+			if (!Main.skipNextDump) {
+				Paths.clearStoredMemory(true);
+				FlxG.bitmap.dumpCache();
+			}
+		});
+		FlxG.signals.postStateSwitch.add(function () {
+			Paths.clearUnusedMemory();
+			Main.skipNextDump = false;
+		});
+		
+		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
 		#if !mobile
 		addChild(fpsVar);
 		#else
