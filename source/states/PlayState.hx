@@ -51,6 +51,7 @@ import psychlua.FunkinLua;
 import cutscenes.DialogueBoxPsych;
 import cutscenes.DialogueBox;
 import backend.Achievements.AchievementObject;
+import backend.StageData.StageFile;
 
 #if sys
 import sys.FileSystem;
@@ -264,10 +265,6 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
-		#if MODS_ALLOWED
-		Paths.destroyLoadedImages();
-		#end
-
 		// for lua
 		instance = this;
 
@@ -1307,6 +1304,14 @@ class PlayState extends MusicBeatState
 		startAndEnd();
 		return;
 		#end
+	}
+
+        function startAndEnd()
+	{
+		if(endingSong)
+			endSong();
+		else
+			startCountdown();
 	}
 
 	var dialogueCount:Int = 0;
