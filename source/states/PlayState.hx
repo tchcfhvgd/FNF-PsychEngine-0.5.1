@@ -5,7 +5,7 @@ import Discord.DiscordClient;
 #end
 import backend.Section.SwagSection;
 import backend.Song.SwagSong;
-import shaders.WiggleEffect.WiggleEffectType;
+import shaders.WiggleEffect;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
 import flixel.FlxG;
