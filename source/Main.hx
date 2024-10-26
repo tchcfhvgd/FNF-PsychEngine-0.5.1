@@ -4,6 +4,7 @@ package;
 import android.content.Context;
 #end
 import debug.FPSCounter;
+import openfl.display.StageScaleMode;
 import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxState;
