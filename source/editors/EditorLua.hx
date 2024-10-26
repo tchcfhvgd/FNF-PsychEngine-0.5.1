@@ -24,8 +24,8 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 import Type.ValueType;
-import Controls;
-import DialogueBoxPsych;
+import backend.Controls;
+import cutscenes.DialogueBoxPsych;
 
 #if desktop
 import Discord;
@@ -180,7 +180,9 @@ class EditorLua {
 			}
 		});
 
+		#if desktop
 		Discord.DiscordClient.addLuaCallbacks(lua);
+		#end
 
 		call('onCreate', []);
 		#end
