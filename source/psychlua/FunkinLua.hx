@@ -657,13 +657,14 @@ class FunkinLua {
 			}
 			PlayState.instance.addCharacterToList(name, charType);
 		});
-		Lua_helper.add_callback(lua, "precacheImage", function(name:String) {
-			#if MODS_ALLOWED
-			Paths.addCustomGraphic(name);
-			#end
+	        Lua_helper.add_callback(lua, "precacheImage", function(name:String) {
+			Paths.returnGraphic(name);
 		});
 		Lua_helper.add_callback(lua, "precacheSound", function(name:String) {
 			CoolUtil.precacheSound(name);
+		});
+		Lua_helper.add_callback(lua, "precacheMusic", function(name:String) {
+			CoolUtil.precacheMusic(name);
 		});
 		Lua_helper.add_callback(lua, "triggerEvent", function(name:String, arg1:Dynamic, arg2:Dynamic) {
 			var value1:String = arg1;
