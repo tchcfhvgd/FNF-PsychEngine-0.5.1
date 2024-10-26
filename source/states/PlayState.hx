@@ -49,6 +49,7 @@ import flixel.input.keyboard.FlxKey;
 import openfl.events.KeyboardEvent;
 import psychlua.FunkinLua;
 import cutscenes.DialogueBoxPsych;
+import cutscenes.DialogueBox;
 
 #if sys
 import sys.FileSystem;
