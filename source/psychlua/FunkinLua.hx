@@ -658,7 +658,7 @@ class FunkinLua {
 			PlayState.instance.addCharacterToList(name, charType);
 		});
 	        Lua_helper.add_callback(lua, "precacheImage", function(name:String) {
-			Paths.returnGraphic(name);
+			Paths.images(name);
 		});
 		Lua_helper.add_callback(lua, "precacheSound", function(name:String) {
 			CoolUtil.precacheSound(name);
@@ -1541,7 +1541,9 @@ class FunkinLua {
 			luaTrace('musicFadeOut is deprecated! Use soundFadeOut instead.', false, true);
 		});
 
+		#if desktop
 		Discord.DiscordClient.addLuaCallbacks(lua);
+		#end 
 
 		call('onCreate', []);
 		#end
