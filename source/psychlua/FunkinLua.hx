@@ -1,12 +1,5 @@
 package psychlua;
 
-#if LUA_ALLOWED
-import llua.Lua;
-import llua.LuaL;
-import llua.State;
-import llua.Convert;
-#end
-
 import flixel.FlxG;
 import flixel.input.keyboard.FlxKey;
 import flixel.tweens.FlxTween;
@@ -31,8 +24,8 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 import Type.ValueType;
-import Controls;
-import DialogueBoxPsych;
+import backend.Controls;
+import cutscenes.DialogueBoxPsych;
 
 #if desktop
 import Discord;
