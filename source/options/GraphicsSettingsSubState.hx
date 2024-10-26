@@ -92,9 +92,4 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			FlxG.updateFramerate = ClientPrefs.framerate;
 		}
 	}
-
-	function onChangePersistentData()
-	{
-		FlxGraphic.defaultPersist = ClientPrefs.imagesPersist;
-	}
 }
