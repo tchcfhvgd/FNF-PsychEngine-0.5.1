@@ -424,9 +424,9 @@ class Paths
 		{
 			var retKey:String = (path != null) ? '$path/$key' : key;
 			retKey = ((path == 'songs') ? 'songs:' : '') + getPath('$retKey.$SOUND_EXT', SOUND, library);
-			if(Assets.exists(retKey, SOUND))
+			if(OpenFlAssets.exists(retKey, SOUND))
 			{
-				currentTrackedSounds.set(gottenPath, Assets.getSound(retKey));
+				currentTrackedSounds.set(gottenPath, OpenFlAssets.getSound(retKey));
 				//trace('precached vanilla sound: $retKey');
 			}
 		}
