@@ -115,7 +115,7 @@ class CoolUtil
 	}
 
 	//uhhhh does this even work at all? i'm starting to doubt
-        public static function precacheMusic(sound:String, ?library:String = null):Void {
+        public static function precacheSound(sound:String, ?library:String = null):Void {
 		Paths.music(sound, library);
 	}
 
