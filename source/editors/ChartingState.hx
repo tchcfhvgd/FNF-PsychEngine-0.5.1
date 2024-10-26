@@ -3,9 +3,9 @@ package editors;
 #if desktop
 import Discord.DiscordClient;
 #end
-import Conductor.BPMChangeEvent;
-import Section.SwagSection;
-import Song.SwagSong;
+import backend.Conductor.BPMChangeEvent;
+import backend.Section.SwagSection;
+import backend.Song.SwagSong;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxObject;
@@ -43,7 +43,7 @@ import openfl.utils.ByteArray;
 import openfl.utils.Assets as OpenFlAssets;
 import lime.media.AudioBuffer;
 import haxe.io.Bytes;
-import flash.geom.Rectangle;
+import openfl.geom.Rectangle;
 import flixel.util.FlxSort;
 #if MODS_ALLOWED
 import sys.io.File;
