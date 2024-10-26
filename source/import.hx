@@ -1,6 +1,8 @@
 #if !macro
 import backend.*;
 import objects.*;
+import states.*;
+import substates.*;
 
 //Flixel
 import flixel.sound.FlxSound;
