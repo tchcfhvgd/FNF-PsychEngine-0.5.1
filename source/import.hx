@@ -3,6 +3,7 @@ import backend.*;
 import objects.*;
 import states.*;
 import substates.*;
+import shaders.ColorSwap;
 
 //Flixel
 import flixel.sound.FlxSound;
