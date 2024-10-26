@@ -19,6 +19,7 @@ import flixel.util.FlxColor;
 import lime.app.Application;
 import editors.MasterEditorMenu;
 import flixel.input.keyboard.FlxKey;
+import backend.Achievements.AchievementObject;
 
 using StringTools;
 
