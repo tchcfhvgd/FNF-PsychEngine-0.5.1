@@ -3,9 +3,9 @@ package states;
 #if desktop
 import Discord.DiscordClient;
 #end
-import Section.SwagSection;
-import Song.SwagSong;
-import WiggleEffect.WiggleEffectType;
+import backend.Section.SwagSection;
+import backend.Song.SwagSong;
+import shaders.WiggleEffect.WiggleEffectType;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
 import flixel.FlxG;
@@ -47,10 +47,8 @@ import editors.CharacterEditorState;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.keyboard.FlxKey;
 import openfl.events.KeyboardEvent;
-import Achievements;
-import StageData;
-import FunkinLua;
-import DialogueBoxPsych;
+import psychlua.FunkinLua;
+import cutscenes.DialogueBoxPsych;
 
 #if sys
 import sys.FileSystem;
