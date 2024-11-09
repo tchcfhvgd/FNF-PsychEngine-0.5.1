@@ -21,7 +21,7 @@ class Transition extends MusicBeatSubstate {
         super();
         qqqeb = new FlxSprite(0, 0);
 	qqqeb.frames = Paths.getSparrowAtlas('transition_out');
-	qqqeb.animation.addByPrefix('lol', 'transition_out', 48, false);
+	qqqeb.animation.addByPrefix('lol', 'transition_out', 48, true);
 	qqqeb.screenCenter();
 	qqqeb.scale.set(2, 2);
 	add(qqqeb);
@@ -43,10 +43,6 @@ class Transition extends MusicBeatSubstate {
         if (isPlaying) {
             qqqeb.animation.reverse();
             isPlaying = false;
-	    qqqeb.animation.finishCallback = function(name:String):Void
-        {
-            close();
-        };
         }
     }
 
