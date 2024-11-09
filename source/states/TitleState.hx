@@ -446,12 +446,16 @@ class TitleState extends MusicBeatState
 
 				transitioning = true;
 				// FlxG.sound.music.stop();
+				var subState:Transition = new Transition("transition_out");
+                                openSubState(subState);
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
 					if (mustUpdate) {
 						MusicBeatState.switchState(new OutdatedState());
 					} else {
+						FlxTransitionableState.skipNextTransIn = true;
+			                        FlxTransitionableState.skipNextTransOut = true;
 						MusicBeatState.switchState(new MainMenuState());
 					}
 					closedState = true;
