@@ -449,7 +449,7 @@ class TitleState extends MusicBeatState
 				var subState:Transition = new Transition();
                                 openSubState(subState);
 				subState.playAnimation();
-				subState.reverseAnimation();
+				//subState.reverseAnimation();
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
