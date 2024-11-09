@@ -44,4 +44,8 @@ class Transition extends MusicBeatSubstate {
             isPlaying = false;
         }
     }
+
+    public function out():Void {
+           close();
+    }
 }
