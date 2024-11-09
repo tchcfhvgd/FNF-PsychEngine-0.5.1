@@ -42,10 +42,11 @@ class Transition extends MusicBeatSubstate {
         if (isPlaying) {
             qqqeb.animation.reverse();
             isPlaying = false;
+	    qqqeb.animation.finishCallback = function(name:String):Void
+        {
+            close();
+        };
         }
     }
 
-    public function out():Void {
-           close();
-    }
 }
