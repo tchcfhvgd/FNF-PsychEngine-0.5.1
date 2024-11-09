@@ -16,6 +16,7 @@ import flixel.util.FlxTimer;
 class Transition extends MusicBeatSubstate {
     public var isPlaying:Bool = false;
     var qqqeb:FlxSprite;
+    public static var nextCamera:FlxCamera;
 
     public function new() {
         super();
@@ -25,6 +26,11 @@ class Transition extends MusicBeatSubstate {
 	qqqeb.screenCenter();
 	qqqeb.scale.set(2, 2);
 	add(qqqeb);
+
+	if(nextCamera != null) {
+			
+		qqqeb.cameras = [nextCamera];
+	}
     }
 
     public function playAnimation():Void {
