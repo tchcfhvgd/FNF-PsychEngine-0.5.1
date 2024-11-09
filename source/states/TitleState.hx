@@ -456,8 +456,6 @@ class TitleState extends MusicBeatState
 					if (mustUpdate) {
 						MusicBeatState.switchState(new OutdatedState());
 					} else {
-						FlxTransitionableState.skipNextTransIn = true;
-			                        FlxTransitionableState.skipNextTransOut = true;
 						MusicBeatState.switchState(new MainMenuState());
 					}
 					closedState = true;
