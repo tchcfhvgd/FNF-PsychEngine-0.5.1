@@ -15,6 +15,7 @@ import flixel.util.FlxTimer;
 
 class Transition extends MusicBeatSubstate {
     public var isPlaying:Bool = false;
+    var qqqeb:FlxSprite;
 
     public function new() {
         super();
