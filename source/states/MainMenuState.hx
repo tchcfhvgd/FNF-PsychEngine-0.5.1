@@ -152,6 +152,10 @@ class MainMenuState extends MusicBeatState
 		#end
 
 		super.create();
+
+		var subState:Transition = new Transition();
+                                openSubState(subState);
+				subState.reverseAnimation();
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
